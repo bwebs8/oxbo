@@ -1,0 +1,500 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXBO | MEN STORE</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Frameworks & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&amp;family=Plus+Jakarta+Sans:wght@300;400;600;800&amp;display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oxboTeal: '#084c61',
+                        oxboDark: '#031c24',
+                        oxboSlate: '#f1f5f9',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syncopate', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        @keyframes pulse-logo {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .loader-active { overflow: hidden; }
+        #preloader { transition: opacity 0.8s ease-in-out, visibility 0.8s; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); }
+        
+        .product-card { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .product-card:hover { transform: translateY(-10px); }
+        .product-card img { transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .product-card:hover img { transform: scale(1.1); }
+        
+        .btn-glow:hover { box-shadow: 0 0 25px rgba(8, 76, 97, 0.4); }
+        
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: #084c61; border-radius: 10px; }
+
+        section { padding-top: 80px; } 
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Plus Jakarta Sans, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.top-0{top:0px}.left-4{left:1rem}.top-4{top:1rem}.z-50{z-index:50}.z-\[100\]{z-index:100}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-20{margin-bottom:5rem}.mb-24{margin-bottom:6rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-10{margin-top:2.5rem}.mt-1{margin-top:0.25rem}.mt-6{margin-top:1.5rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-\[3\/4\]{aspect-ratio:3/4}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-20{height:5rem}.h-28{height:7rem}.h-5{height:1.25rem}.h-\[500px\]{height:500px}.h-\[60vh\]{height:60vh}.h-full{height:100%}.h-screen{height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-28{width:7rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-xs{max-width:20rem}.translate-y-4{--tw-translate-y:1rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-20{gap:5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-sm{border-radius:0.125rem}.border{border-width:1px}.border-2{border-width:2px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-t-4{border-top-width:4px}.border-oxboTeal{--tw-border-opacity:1;border-color:rgb(8 76 97 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.border-white\/5{border-color:rgb(255 255 255 / 0.05)}.bg-oxboDark{--tw-bg-opacity:1;background-color:rgb(3 28 36 / var(--tw-bg-opacity, 1))}.bg-oxboSlate{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-oxboTeal{--tw-bg-opacity:1;background-color:rgb(8 76 97 / var(--tw-bg-opacity, 1))}.bg-oxboTeal\/70{background-color:rgb(8 76 97 / 0.7)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.bg-oxboTeal\/20{background-color:rgb(8 76 97 / 0.2)}.bg-cover{background-size:cover}.bg-fixed{background-attachment:fixed}.bg-center{background-position:center}.object-cover{object-fit:cover}.p-0{padding:0px}.p-12{padding:3rem}.px-12{padding-left:3rem;padding-right:3rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-32{padding-top:8rem;padding-bottom:8rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-2{padding-bottom:0.5rem}.text-center{text-align:center}.font-display{font-family:Syncopate, sans-serif}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[8px\]{font-size:8px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[9px\]{font-size:9px}.font-black{font-weight:900}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-loose{line-height:2}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-\[0\.3em\]{letter-spacing:0.3em}.tracking-\[0\.5em\]{letter-spacing:0.5em}.tracking-\[1\.2em\]{letter-spacing:1.2em}.tracking-\[1em\]{letter-spacing:1em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.tracking-tight{letter-spacing:-0.025em}.text-oxboDark{--tw-text-opacity:1;color:rgb(3 28 36 / var(--tw-text-opacity, 1))}.text-oxboTeal{--tw-text-opacity:1;color:rgb(8 76 97 / var(--tw-text-opacity, 1))}.text-oxboTeal\/20{color:rgb(8 76 97 / 0.2)}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-20{opacity:0.2}.opacity-40{opacity:0.4}.opacity-50{opacity:0.5}.opacity-80{opacity:0.8}.opacity-90{opacity:0.9}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.blur-\[1px\]{--tw-blur:blur(1px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-2xl{--tw-drop-shadow:drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-1000{transition-duration:1000ms}.duration-700{transition-duration:700ms}.duration-500{transition-duration:500ms}.selection\:bg-oxboTeal *::selection{--tw-bg-opacity:1;background-color:rgb(8 76 97 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-oxboTeal::selection{--tw-bg-opacity:1;background-color:rgb(8 76 97 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.hover\:bg-oxboTeal:hover{--tw-bg-opacity:1;background-color:rgb(8 76 97 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:text-oxboTeal:hover{--tw-text-opacity:1;color:rgb(8 76 97 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:grayscale-0:hover{--tw-grayscale:grayscale(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.focus\:border-oxboTeal:focus{--tw-border-opacity:1;border-color:rgb(8 76 97 / var(--tw-border-opacity, 1))}.group:hover .group-hover\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:rotate-\[360deg\]{--tw-rotate:360deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:block{display:block}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}}@media (min-width: 768px){.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-\[140px\]{font-size:140px}}@media (min-width: 1024px){.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body class="bg-white text-slate-900 selection:bg-oxboTeal selection:text-white" data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+
+    <!-- 1. PRELOADER -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center" style="opacity: 0; visibility: hidden;">
+        <div class="relative">
+            <img src="logo.png" alt="OXBO" class="h-28 w-28 rounded-full" style="animation: pulse-logo 2s infinite">
+            <div class="absolute inset-0 border-2 border-oxboTeal rounded-full animate-ping opacity-20"></div>
+        </div>
+        <div class="mt-10 overflow-hidden text-center">
+            <h2 class="font-display text-[10px] tracking-[1.2em] text-oxboTeal animate-pulse uppercase">OXBO MEN STORE</h2>
+        </div>
+    </div>
+
+    <!-- 2. NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-100 h-20">
+        <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+            <div class="flex items-center gap-4 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                <img src="logo.png" alt="OXBO" class="h-10 w-10 rounded-full group-hover:rotate-[360deg] transition-transform duration-1000 border border-slate-100">
+                <span class="font-display text-lg tracking-tighter hidden sm:block">OXBO</span>
+            </div>
+
+            <div class="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.3em]">
+                <a href="#home" class="hover:text-oxboTeal transition-all">Home</a>
+                <a href="#shop" class="hover:text-oxboTeal transition-all">Shop</a>
+                <a href="#about" class="hover:text-oxboTeal transition-all">About</a>
+                <a href="#contact" class="hover:text-oxboTeal transition-all">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-oxboTeal text-white px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-all hidden sm:block">
+                    Order via DM
+                </a>
+                <a href="https://www.instagram.com/oxbo_thrissur/" target="_blank" class="hover:text-oxboTeal transition">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MAIN CONTENT -->
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="p-0">
+            <div class="relative h-screen flex items-center justify-center overflow-hidden bg-oxboDark">
+                <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&amp;fit=crop&amp;q=80&amp;w=2000" class="absolute inset-0 w-full h-full object-cover opacity-40 scale-110 blur-[1px]" alt="Background">
+                <div class="relative text-center text-white px-6">
+                    <h2 class="text-xs font-bold tracking-[1em] uppercase mb-8 opacity-80 aos-init aos-animate" data-aos="fade-down">Thrissur Origin</h2>
+                    <h1 class="text-6xl md:text-[140px] font-display font-bold leading-none tracking-tighter mb-12 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+                        OXBO<br><span class="text-oxboTeal drop-shadow-2xl">MEN STORE</span>
+                    </h1>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center aos-init" data-aos="fade-up" data-aos-delay="600">
+                        <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="btn-glow bg-white text-oxboTeal px-12 py-6 font-black uppercase tracking-widest hover:bg-oxboTeal hover:text-white transition-all rounded-sm flex items-center gap-3">
+                            Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRESH DROPS (EXCLUSIVE SECTION) -->
+            <div class="py-32 bg-white overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                        <div data-aos="fade-right" class="aos-init">
+                            <h2 class="text-xs font-bold text-oxboTeal tracking-[0.5em] uppercase mb-4">New Release</h2>
+                            <h3 class="text-5xl font-display font-bold tracking-tighter uppercase">FRESH DROPS</h3>
+                        </div>
+                        <p class="max-w-xs text-slate-400 text-sm leading-relaxed aos-init" data-aos="fade-left">Hand-numbered limited editions. Once they are gone, they are gone forever.</p>
+                    </div>
+
+                    <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="0">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-white px-3 py-1 text-[8px] font-black uppercase tracking-widest text-oxboTeal">Limited</span>
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Oxbo Puffer Jacket</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Outerwear</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$185</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-white px-3 py-1 text-[8px] font-black uppercase tracking-widest text-oxboTeal">Drop 02</span>
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Cyber Tech Hoodie</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Hoodies</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$95</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-white px-3 py-1 text-[8px] font-black uppercase tracking-widest text-oxboTeal">Archive</span>
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Distressed Work Coat</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Outerwear</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$160</p>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARALLAX MID-SECTION -->
+        <div class="relative h-[60vh] flex items-center bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&amp;fit=crop&amp;q=80&amp;w=1600')">
+            <div class="absolute inset-0 bg-oxboTeal/70 backdrop-blur-sm"></div>
+            <div class="max-w-4xl mx-auto px-6 relative text-white text-center">
+                <h2 class="text-4xl md:text-5xl font-display font-bold tracking-tighter uppercase mb-6 aos-init" data-aos="zoom-out">Beyond the Fabric</h2>
+                <p class="text-lg opacity-90 leading-loose aos-init" data-aos="fade-up">Architectural silhouettes and a commitment to Thrissur's creative pulse.</p>
+            </div>
+        </div>
+
+        <!-- SHOP SECTION (CATALOGUE) -->
+        <section id="shop" class="bg-white py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <header class="text-center mb-20 aos-init" data-aos="fade-down">
+                    <h2 class="text-xs font-bold text-oxboTeal tracking-[0.5em] uppercase mb-4">Complete Series</h2>
+                    <h3 class="text-5xl font-display font-bold tracking-tighter uppercase">THE CATALOGUE</h3>
+                </header>
+                <div id="shop-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="0">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Heavyweight Box Tee</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Tees</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$45</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1517438476312-10d79c67750d?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Urban Cargo V1</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Pants</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$110</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Oxbo Studio Cap</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Accessories</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$30</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Minimal Jogger</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Pants</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$80</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Graphic Street Tee</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Tees</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$50</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Urban Tech Pack</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Bags</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$120</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Essential White Tee</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Basics</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$40</p>
+                    </div>
+                </div>
+            
+                <div class="product-card group aos-init" data-aos="fade-up" data-aos-delay="700">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="https://images.unsplash.com/photo-1582966298438-641ff51185c1?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover">
+                        
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">Logo Print Socks</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Accessories</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$15</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="bg-oxboSlate py-32 overflow-hidden border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <header class="text-center mb-24 aos-init" data-aos="fade-down">
+                    <h2 class="text-xs font-bold text-oxboTeal tracking-[0.5em] uppercase mb-4">Community</h2>
+                    <h3 class="text-4xl font-display font-bold tracking-tighter uppercase">OXBO VOICES</h3>
+                </header>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-white p-12 shadow-sm border-t-4 border-oxboTeal aos-init" data-aos="fade-right" data-aos-delay="100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" aria-hidden="true" class="lucide lucide-quote text-oxboTeal/20 w-12 h-12 mb-6"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                        <p class="text-slate-600 italic leading-relaxed mb-8">"The quality is next-level. Best oversized fit I've worn."</p>
+                        <span class="font-black text-[10px] uppercase tracking-widest text-oxboTeal">— Rahul K., Thrissur</span>
+                    </div>
+                    <div class="bg-white p-12 shadow-sm border-t-4 border-oxboTeal aos-init" data-aos="fade-up" data-aos-delay="300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" aria-hidden="true" class="lucide lucide-quote text-oxboTeal/20 w-12 h-12 mb-6"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                        <p class="text-slate-600 italic leading-relaxed mb-8">"Minimal branding, maximum impact."</p>
+                        <span class="font-black text-[10px] uppercase tracking-widest text-oxboTeal">— Sarah J., Dubai</span>
+                    </div>
+                    <div class="bg-white p-12 shadow-sm border-t-4 border-oxboTeal aos-init" data-aos="fade-left" data-aos-delay="500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" aria-hidden="true" class="lucide lucide-quote text-oxboTeal/20 w-12 h-12 mb-6"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                        <p class="text-slate-600 italic leading-relaxed mb-8">"Order was smooth. Delivery in 2 days."</p>
+                        <span class="font-black text-[10px] uppercase tracking-widest text-oxboTeal">— Arjun V., Kochi</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-32 bg-white">
+            <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative aos-init" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-[500px] object-cover rounded shadow-2xl" alt="">
+                </div>
+                <div data-aos="fade-left" class="aos-init">
+                    <h2 class="text-5xl font-display font-bold tracking-tighter uppercase mb-8">The Thrissur Studio</h2>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                        OXBO was founded in 2024 to redefine the urban silhouette. Every release is a numbered limited edition.
+                    </p>
+                    <a href="#contact" class="text-xs font-black uppercase tracking-[0.3em] border-b-2 border-oxboTeal pb-2 hover:text-oxboTeal transition">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="bg-oxboDark text-white py-32">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+                <div data-aos="fade-up" class="aos-init">
+                    <h2 class="text-5xl font-display font-bold tracking-tighter uppercase mb-8 text-oxboTeal">Connect</h2>
+                    <p class="text-slate-400 mb-12 uppercase tracking-widest text-xs font-bold leading-loose">
+                        Location: Thrissur, Kerala<br>
+                        IG: @oxbo_thrissur
+                    </p>
+                    <a href="https://www.instagram.com/direct/t/17842072734170019/" target="_blank" class="bg-oxboTeal text-white px-8 py-5 rounded font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-oxboTeal transition-all inline-block">
+                        Start DM Inquiry
+                    </a>
+                </div>
+                <form class="space-y-6 aos-init" data-aos="fade-up">
+                    <input type="text" placeholder="NAME" class="w-full bg-white/5 border-b border-white/20 py-6 text-xs font-bold tracking-widest focus:border-oxboTeal outline-none transition-all">
+                    <textarea placeholder="MESSAGE" rows="4" class="w-full bg-white/5 border-b border-white/20 py-6 text-xs font-bold tracking-widest focus:border-oxboTeal outline-none transition-all"></textarea>
+                    <button class="bg-white text-oxboDark px-12 py-5 font-black uppercase tracking-widest hover:bg-oxboTeal hover:text-white transition-all">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-oxboDark text-white py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+            <img src="logo.png" class="h-16 w-16 rounded-full mb-12 grayscale opacity-50 hover:grayscale-0 transition duration-700">
+            <p class="text-[8px] text-slate-700 font-bold uppercase tracking-[1em]">OXBO ARCHIVE © 2025 • THRISSUR STUDIO</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                document.body.classList.remove('loader-active');
+                AOS.init({ duration: 1200, once: false });
+            }, 2500);
+        });
+
+        lucide.createIcons();
+
+        // 1. FRESH DROPS DATA (High-impact items)
+        const freshDrops = [
+            { id: 101, name: 'Oxbo Puffer Jacket', price: 185, category: 'Outerwear', img: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800', tag: 'Limited' },
+            { id: 102, name: 'Cyber Tech Hoodie', price: 95, category: 'Hoodies', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800', tag: 'Drop 02' },
+            { id: 103, name: 'Distressed Work Coat', price: 160, category: 'Outerwear', img: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=800', tag: 'Archive' }
+        ];
+
+        // 2. CATALOGUE DATA (Essentials)
+        const catalogueProducts = [
+            { id: 1, name: 'Heavyweight Box Tee', price: 45, category: 'Tees', img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800' },
+            { id: 2, name: 'Urban Cargo V1', price: 110, category: 'Pants', img: 'https://images.unsplash.com/photo-1517438476312-10d79c67750d?auto=format&fit=crop&q=80&w=800' },
+            { id: 3, name: 'Oxbo Studio Cap', price: 30, category: 'Accessories', img: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&q=80&w=800' },
+            { id: 4, name: 'Minimal Jogger', price: 80, category: 'Pants', img: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&q=80&w=800' },
+            { id: 5, name: 'Graphic Street Tee', price: 50, category: 'Tees', img: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=800' },
+            { id: 6, name: 'Urban Tech Pack', price: 120, category: 'Bags', img: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800' },
+            { id: 7, name: 'Essential White Tee', price: 40, category: 'Basics', img: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&q=80&w=800' },
+            { id: 8, name: 'Logo Print Socks', price: 15, category: 'Accessories', img: 'https://images.unsplash.com/photo-1582966298438-641ff51185c1?auto=format&fit=crop&q=80&w=800' }
+        ];
+
+        function renderSection(data, elementId) {
+            const grid = document.getElementById(elementId);
+            const igDirect = "https://www.instagram.com/direct/t/17842072734170019/";
+            
+            grid.innerHTML = data.map((p, index) => `
+                <div class="product-card group" data-aos="fade-up" data-aos-delay="${index * 100}">
+                    <div class="relative overflow-hidden aspect-[3/4] bg-oxboSlate rounded-sm">
+                        <img src="${p.img}" class="w-full h-full object-cover">
+                        ${p.tag ? `<span class="absolute top-4 left-4 bg-white px-3 py-1 text-[8px] font-black uppercase tracking-widest text-oxboTeal">${p.tag}</span>` : ''}
+                        <div class="absolute inset-0 bg-oxboTeal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="${igDirect}" target="_blank" class="bg-white text-oxboTeal px-6 py-3 text-[9px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                Order via DM
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold text-xs uppercase tracking-tight">${p.name}</h4>
+                            <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">${p.category}</p>
+                        </div>
+                        <p class="font-black text-xs text-oxboTeal">$${p.price}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.onload = () => {
+            renderSection(freshDrops, 'featured-grid');
+            renderSection(catalogueProducts, 'shop-grid');
+        };
+    </script>
+
+</body></html>
